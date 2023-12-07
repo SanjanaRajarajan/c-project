@@ -8,28 +8,27 @@ class BankAccount {
   balance(initialBalance) {}
   void deposit(double amount) {
     balance += amount;
-    std::cout << "Deposit successful....!"<<std::endl<<"Your Current balance: " << balance << std::endl;
-  }money
+    std::cout << "Deposit successful. Current balance: " << balance << std::endl;
+  }
   void withdraw(double amount) {
     if (amount <= balance) {
       balance -= amount;
-      std::cout << "Withdrawal successful....!"<<std::endl<<"Your  Current balance : " << balance << std::endl;
+      std::cout << "Withdrawal successful. Current balance: " << balance << std::endl;
     } else {
-      std::cout << "Insufficient balance, Cannot withdraw....!" << std::endl;
+      std::cout << "Insufficient balance. Cannot withdraw." << std::endl;
     }
   }
 };
 int main() {
-  std::string sacno ="SB-123";
-  std::cout<<std::endl;
+  std::string sacno = "SB-123";
   double Opening_balance, deposit_amt, withdrawal_amt;
-  Opening_balance = 2500;
-  std::cout <<"A/c. No." << sacno <<std::endl<< "Balance: " << Opening_balance << std::endl;
-  BankAccount account(sacno, 2500.0);
+  Opening_balance = 2000;
+  std::cout << "A/c. No." << sacno << " Balance: " << Opening_balance << std::endl;
+  BankAccount account(sacno, 2000.0);
   deposit_amt = 3000;
   std::cout << "Deposit Amount: " << deposit_amt << std::endl;
   account.deposit(deposit_amt);
-  withdrawal_amt = 1000;
+  withdrawal_amt = 1200;
   std::cout << "Withdrawl Amount: " << withdrawal_amt << std::endl;
   account.withdraw(withdrawal_amt);
   withdrawal_amt = 800;
